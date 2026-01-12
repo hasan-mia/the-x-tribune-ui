@@ -1,0 +1,13 @@
+import { Metadata } from 'next';
+import AboutContent from '@/components/pages/about-content';
+
+export const metadata: Metadata = {
+  title: "About || Beyond Tax Consultants – Professional Accounting & Tax Services",
+  description: "Beyond Tax Consultants provides professional accounting and tax services for businesses and individuals.",
+  keywords: ["tax", "accounting", "consulting", "business services"],
+  authors: [{ name: "Beyond Tax Consultants" }],
+}
+
+export default function AboutPage() {
+  return <AboutContent />;
+}
