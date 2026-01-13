@@ -1,14 +1,16 @@
-import Banner from "@/components/banner/banner"
-import FeaturedSection from "@/components/featured-section/featured-section"
-import ThreeColumnAds from "@/components/three-column-ads/three-column-ads"
+import BannerAds from "@/components/ads/banner-ads"
+import FeaturedSection from "@/components/sections/featured-section"
+import ThreeColumnAds from "@/components/ads/three-column-ads"
 import SidebarAds from "@/components/sidebar-ads/sidebar-ads"
 import Gallery from "@/components/gallery/gallery"
 import NewsCard from "@/components/news-card/news-card"
+import GridSection from "@/components/sections/grid-section"
+import VerticalSection from "@/components/sections/vertical-section"
 
 export default function Home() {
   return (
     <>
-      <Banner />
+      <BannerAds />
 
       {/* Featured Section with Tabs */}
       <FeaturedSection />
@@ -16,26 +18,12 @@ export default function Home() {
       {/* Three Column Ads */}
       <ThreeColumnAds />
 
-      {/* First Category Section - জাতীয় with 3-column grid */}
-      <section className="bg-background py-6 border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-foreground border-b-2 border-primary pb-3 inline-block">জাতীয়</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <NewsCard
-                key={i}
-                image={`/placeholder.svg?height=200&width=400&query=national news ${i + 1}`}
-                title={`জাতীয় খবর - গুরুত্বপূর্ণ সংবাদ ${i + 1}`}
-                href="#"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* জাতীয় with 3-column grid */}
+      <GridSection />
 
       <ThreeColumnAds />
+
+      <VerticalSection />
 
       {/* Second Category Section - বিনোদন */}
       <section className="bg-background py-6 border-b border-border">

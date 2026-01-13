@@ -20,6 +20,7 @@
 	--accent-foreground: oklch(0.205 0 0);
 	--destructive: oklch(0.577 0.245 27.325);
 	--destructive-foreground: oklch(0.577 0.245 27.325);
+	--danger: rgba(220 53 69 1);
 	--border: oklch(0.922 0 0);
 	--input: oklch(0.922 0 0);
 	--ring: oklch(0.708 0 0);
@@ -56,6 +57,7 @@
 	--accent-foreground: oklch(0.985 0 0);
 	--destructive: oklch(0.396 0.141 25.723);
 	--destructive-foreground: oklch(0.637 0.237 25.331);
+	--danger: rgba(220 53 69 1);
 	--border: oklch(0.269 0 0);
 	--input: oklch(0.269 0 0);
 	--ring: oklch(0.439 0 0);
@@ -94,6 +96,7 @@
 	--color-destructive: var(--destructive);
 	--color-destructive-foreground: var(--destructive-foreground);
 	--color-border: var(--border);
+	--color-danger: var(--danger);
 	--color-input: var(--input);
 	--color-ring: var(--ring);
 	--color-chart-1: var(--chart-1);
@@ -175,4 +178,57 @@
 	border-bottom-style: dotted;
 	bottom: 0px;
 	border-bottom-right-radius: 100%;
+}
+
+/* cat-title */
+.cat-title h1 {
+	border-bottom: 1px solid #a2a2a2;
+	display: block;
+	font-weight: bold;
+	/* border-left: double;
+    border-top: double;
+    border-right: double; */
+}
+
+.cat-title h1 a {
+	border-bottom: double #a2a2a2;
+	margin: 0 0 1px;
+	padding: 5px 5px;
+	font-size: 24px;
+	display: block;
+	text-decoration: none;
+}
+
+.cat-title-two h1 {
+	border-bottom: 1px solid #a2a2a2;
+	display: block;
+	font-weight: bold;
+	background: #26282b;
+}
+
+.cat-title-two h1 a {
+	border-bottom: double #a2a2a2;
+	margin: 0 0 1px;
+	padding: 5px 5px;
+	font-size: 24px;
+	display: block;
+	text-decoration: none;
+	color: #ffff;
+	text-align: center;
+	border-top: double;
+}
+
+.related-title h1 {
+	margin: 0 0 1px;
+	padding: 5px 5px;
+	font-size: 24px;
+	font-weight: 600;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+	border-top: 5px double;
+	border-bottom: 5px double;
+	border-left: 5px double;
+	border-right: 5px double;
 }
