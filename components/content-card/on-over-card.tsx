@@ -1,5 +1,5 @@
 
-export default function VerticalCard({ article }: any) {
+export default function OnOverCard({ article }: any) {
     return (
         <article key={article.id} className="group cursor-pointer">
             <div className="relative overflow-hidden shadow-md">
@@ -8,10 +8,11 @@ export default function VerticalCard({ article }: any) {
                     alt={article.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <h2 className="absolute bottom-0 left-0 right-0 p-4 text-base font-bold text-white leading-tight group-hover:text-red-400 transition">
+                    {article.title}
+                </h2>
             </div>
-            <h2 className="mt-3 text-base font-bold text-gray-800 leading-tight group-hover:text-red-700 transition">
-                {article.title}
-            </h2>
         </article>
     )
 }

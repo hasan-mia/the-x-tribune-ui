@@ -1,6 +1,7 @@
 import BannerAds from "./banner-ads";
 
 export default function ThreeColumnAds() {
+  const ads = [""]
   return (
     <section className="bg-card py-4">
       <div className="container mx-auto">

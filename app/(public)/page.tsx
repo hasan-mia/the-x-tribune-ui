@@ -5,7 +5,10 @@ import SidebarAds from "@/components/sidebar-ads/sidebar-ads"
 import Gallery from "@/components/gallery/gallery"
 import NewsCard from "@/components/news-card/news-card"
 import GridSection from "@/components/sections/grid-section"
-import VerticalSection from "@/components/sections/vertical-section"
+import ThreeColumnVerticalSection from "@/components/sections/three-column-vertical-section"
+import ThreeColumnVerticalSectionTwo from "@/components/sections/three-column-vertical-section-two"
+import HorizontalGridSection from "@/components/sections/horizontal-grid-section"
+import VerticalGridSection from '../../components/sections/vertical-grid-section';
 
 export default function Home() {
   return (
@@ -23,7 +26,19 @@ export default function Home() {
 
       <ThreeColumnAds />
 
-      <VerticalSection />
+      <ThreeColumnVerticalSection />
+
+      <ThreeColumnAds />
+
+      <ThreeColumnVerticalSectionTwo />
+
+      <ThreeColumnAds />
+
+      <HorizontalGridSection />
+
+      <ThreeColumnAds />
+
+      <VerticalGridSection />
 
       {/* Second Category Section - বিনোদন */}
       <section className="bg-background py-6 border-b border-border">
