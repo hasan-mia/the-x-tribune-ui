@@ -1,7 +1,7 @@
 import VerticalAds from "../ads/vertical-ads"
 import CategoryTitle from "../category-title/category-title"
+import HorizontalCard from "../content-card/horizontal-card"
 import OnOverCardWithContent from "../content-card/on-over-card-content"
-import VerticalCard from "../content-card/vertical-card"
 
 export default function VerticalGridSection() {
   const newsArticles = [
@@ -59,9 +59,9 @@ export default function VerticalGridSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <OnOverCardWithContent article={newsArticles[0]} />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1">
                 {newsArticles.slice(1, 5).map((article) => (
-                  <VerticalCard key={article.id} article={article} />
+                  <HorizontalCard key={article.id} article={article} />
                 ))}
               </div>
             </div>

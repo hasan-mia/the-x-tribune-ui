@@ -2,6 +2,7 @@ import VerticalAds from "../ads/vertical-ads"
 import CategoryTitle from "../category-title/category-title"
 import HorizontalCard from "../content-card/horizontal-card"
 import VerticalCard from "../content-card/vertical-card"
+import PollComponent from "../poll/Poll"
 import FeatureGrid from "./feature-grid"
 
 export default function NationalSection() {
@@ -60,7 +61,10 @@ export default function NationalSection() {
 
           {/* Right Sidebar - Advertisement */}
           <div className="lg:col-span-1">
-            <VerticalAds />
+
+            <PollComponent />
+
+            <VerticalAds height={60} />
           </div>
         </div>
       </div>
