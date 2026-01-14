@@ -22,7 +22,7 @@ export default function Header() {
             src="/logo.png"
             alt="World Tribune"
             width={320}
-            height={40}
+            height={100}
             priority
           />
         </div>
