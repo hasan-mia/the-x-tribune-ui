@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-
+import React from 'react';
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Calendar, Clock, User, ArrowLeft, Bookmark, Facebook, Twitter, Linkedin, Mail, ChevronRight, Loader2, Eye } from 'lucide-react'
@@ -67,7 +68,7 @@ export default function BlogDetailsContent({ slug }: { slug: string }) {
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
-                    <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
+                    <p className="text-muted-foreground mb-8">The article you&apos;re looking for doesn&apos;t exist.</p>
                     <Link href="/blog">
                         <Button>
                             <ArrowLeft className="h-4 w-4 mr-2" />

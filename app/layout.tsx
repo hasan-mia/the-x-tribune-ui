@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unknown-property */
 import type { Metadata } from 'next'
 import './globals.css'
 import { ClientLayout } from './client-layout'
+import React from "react"
 
 export const metadata: Metadata = {
   title: "The X Tribune",
@@ -27,6 +29,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="XTribune" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="stylesheet" href="fonts/kalpurush.css" />
+        <link rel="stylesheet" href="fonts/LiHasan.css" />
       </head>
       <body className="geist_... bg-background text-foreground" cz-shortcut-listen="true">
         <ClientLayout>{children}</ClientLayout>

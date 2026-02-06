@@ -1,3 +1,4 @@
+import React from "react";
 import { Metadata } from 'next';
 import ContactContent from '@/components/pages/contact-content';
 

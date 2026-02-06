@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React from 'react';
 import BlogDetailsContent from '@/components/pages/blog-details-content'
 import { Metadata } from 'next'
 

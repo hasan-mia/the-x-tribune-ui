@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import BlogContent from '@/components/pages/blog-content';
 

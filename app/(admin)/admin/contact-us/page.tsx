@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Trash2, Search, Mail, Eye, MessageSquare } from "lucide-react"
@@ -140,7 +141,7 @@ export default function AdminContactPage() {
       cell: (contact) => (
         <select
           value={contact.status}
-          onChange={(e) => handleStatusChange(contact.id, e.target.value as any)}
+          onChange={(e) => handleStatusChange(contact.id, e.target.value as never)}
           className="border rounded px-2 py-1 text-sm"
         >
           <option value="new">New</option>

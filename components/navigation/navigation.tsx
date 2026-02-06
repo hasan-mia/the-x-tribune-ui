@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Search, Home, ChevronDown } from "lucide-react"
 
@@ -123,99 +123,97 @@ export default function Navigation() {
   const [mobileActiveMenu, setMobileActiveMenu] = useState<string | null>(null)
 
   return (
-    <nav className="bg-white shadow-md sticky top-10 z-50 border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-3">
-          {/* Home Icon */}
-          <Link href="/" className="text-red-600 hover:text-red-700 transition">
-            <Home className="w-6 h-6" />
-          </Link>
+    <nav className="container mx-auto bg-card border-b border-border shadow-md sticky top-10 z-50 px-4">
+      <div className="flex items-center justify-between py-3">
+        {/* Home Icon */}
+        <Link href="/" className="text-red-600 hover:text-red-700 transition">
+          <Home className="w-6 h-6" />
+        </Link>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden ml-4 text-gray-700"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden ml-4 text-gray-700"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1 flex-1 ml-6">
-            {categories.map((cat) => (
-              <div
-                key={cat.name}
-                className="relative group"
-                onMouseEnter={() => setActiveMenu(cat.name)}
-                onMouseLeave={() => setActiveMenu(null)}
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-1 flex-1 ml-6">
+          {categories.map((cat) => (
+            <div
+              key={cat.name}
+              className="relative group"
+              onMouseEnter={() => setActiveMenu(cat.name)}
+              onMouseLeave={() => setActiveMenu(null)}
+            >
+              <Link
+                href={cat.href}
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-red-600 transition whitespace-nowrap"
               >
-                <Link
-                  href={cat.href}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-red-600 transition whitespace-nowrap"
-                >
-                  {cat.name}
-                  <ChevronDown className="w-3 h-3" />
-                </Link>
+                {cat.name}
+                <ChevronDown className="w-3 h-3" />
+              </Link>
 
-                {/* Mega Menu Dropdown */}
-                {activeMenu === cat.name && (
-                  <div className="absolute top-full left-0 w-48 bg-white shadow-lg border border-gray-200 rounded-md py-2 mt-1">
-                    {cat.subcategories.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-600 transition"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Search */}
-          <div className="ml-auto">
-            <button className="text-gray-700 hover:text-red-600 transition">
-              <Search className="w-5 h-5" />
-            </button>
-          </div>
+              {/* Mega Menu Dropdown */}
+              {activeMenu === cat.name && (
+                <div className="absolute top-full left-0 w-48 bg-white shadow-lg border border-gray-200 rounded-md py-2 mt-1">
+                  {cat.subcategories.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      href={sub.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-600 transition"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-gray-200 pt-4 max-h-96 overflow-y-auto">
-            {categories.map((cat) => (
-              <div key={cat.name} className="mb-2">
-                <button
-                  onClick={() => setMobileActiveMenu(mobileActiveMenu === cat.name ? null : cat.name)}
-                  className="w-full flex items-center justify-between px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition"
-                >
-                  <span className="font-medium">{cat.name}</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${mobileActiveMenu === cat.name ? "rotate-180" : ""
-                      }`}
-                  />
-                </button>
-
-                {mobileActiveMenu === cat.name && (
-                  <div className="ml-4 mt-1 space-y-1">
-                    {cat.subcategories.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-600 rounded transition"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Search */}
+        <div className="ml-auto">
+          <button className="text-gray-700 hover:text-red-600 transition">
+            <Search className="w-5 h-5" />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="lg:hidden pb-4 border-t border-gray-200 pt-4 max-h-96 overflow-y-auto">
+          {categories.map((cat) => (
+            <div key={cat.name} className="mb-2">
+              <button
+                onClick={() => setMobileActiveMenu(mobileActiveMenu === cat.name ? null : cat.name)}
+                className="w-full flex items-center justify-between px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition"
+              >
+                <span className="font-medium">{cat.name}</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${mobileActiveMenu === cat.name ? "rotate-180" : ""
+                    }`}
+                />
+              </button>
+
+              {mobileActiveMenu === cat.name && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {cat.subcategories.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      href={sub.href}
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-600 rounded transition"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   )
 }

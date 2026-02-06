@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -134,7 +135,7 @@ export default function ResetPasswordForm() {
                     <div className="space-y-2">
                         <h2 className="text-2xl font-bold text-slate-900">Set new password</h2>
                         <p className="text-slate-600">
-                            Enter your new password below. Make sure it's at least 6 characters long.
+                            Enter your new password below. Make sure it&apos;s at least 6 characters long.
                         </p>
                     </div>
 

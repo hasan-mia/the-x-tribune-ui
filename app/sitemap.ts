@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MetadataRoute } from 'next'
 
 const BASE_URL = 'https://beyondtaxconsultants.com'

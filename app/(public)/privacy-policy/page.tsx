@@ -1,3 +1,4 @@
+import React from "react"
 import Link from 'next/link'
 import { Shield, Lock, Eye, UserCheck, Database, Mail } from 'lucide-react'
 
@@ -24,7 +25,7 @@ export default function PrivacyPolicy() {
                     {/* Introduction */}
                     <section className="mb-12">
                         <p className="text-slate-700 leading-relaxed mb-4">
-                            At Beyond Tax Consultants ("we," "our," or "us"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                            At Beyond Tax Consultants (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                         </p>
                         <p className="text-slate-700 leading-relaxed">
                             By using our services, you agree to the collection and use of information in accordance with this policy. We handle sensitive financial information with the highest standards of confidentiality and security.
@@ -209,7 +210,7 @@ export default function PrivacyPolicy() {
 
                     {/* Children's Privacy */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-6">Children's Privacy</h2>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-6">Children&apos;s Privacy</h2>
                         <p className="text-slate-700">
                             Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
                         </p>
@@ -219,7 +220,7 @@ export default function PrivacyPolicy() {
                     <section className="mb-12">
                         <h2 className="text-3xl font-bold text-slate-900 mb-6">Changes to This Policy</h2>
                         <p className="text-slate-700">
-                            We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new policy on our website and updating the "Last Updated" date. Your continued use of our services after changes constitutes acceptance of the updated policy.
+                            We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new policy on our website and updating the &quot;Last Updated&quot; date. Your continued use of our services after changes constitutes acceptance of the updated policy.
                         </p>
                     </section>
 

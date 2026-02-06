@@ -1,16 +1,13 @@
+import React from "react"
 import BannerAds from "@/components/ads/banner-ads"
 import FeaturedSection from "@/components/sections/featured-section"
 import ThreeColumnAds from "@/components/ads/three-column-ads"
-import SidebarAds from "@/components/sidebar-ads/sidebar-ads"
 import Gallery from "@/components/gallery/gallery"
-import NewsCard from "@/components/news-card/news-card"
 import GridSection from "@/components/sections/grid-section"
 import ThreeColumnVerticalSection from "@/components/sections/three-column-vertical-section"
 import ThreeColumnVerticalSectionTwo from "@/components/sections/three-column-vertical-section-two"
 import HorizontalGridSection from "@/components/sections/horizontal-grid-section"
 import VerticalGridSection from '@/components/sections/vertical-grid-section';
-import PollComponent from "@/components/poll/Poll"
-import CricketScoreWidget from "@/components/live-score/cricket-score-widget"
 
 export default function Home() {
   return (
@@ -40,9 +37,6 @@ export default function Home() {
       <VerticalGridSection />
 
       <Gallery />
-
-      <CricketScoreWidget />
-
     </>
   )
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import FAQContent from '@/components/pages/faq-content';
 

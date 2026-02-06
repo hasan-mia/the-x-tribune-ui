@@ -1,12 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, UserCircle } from "lucide-react"
 import { DataTable, DataTableColumn } from "@/components/ui/data-table"
 import { Input } from "@/components/ui/input"
-import { useState } from "react"
 import { formatDate } from "@/utils/helper"
-import ConfirmDeleteModal from "@/components/shared/confirm-modal"
 import {
   Select,
   SelectContent,

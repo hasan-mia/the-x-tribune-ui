@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
+import React from 'react';
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useState } from 'react'
-import { MapPin, Phone, Send, CheckCircle2, MessageSquare } from 'lucide-react'
+import { Phone, Send, CheckCircle2, MessageSquare } from 'lucide-react'
 import { reasons } from '@/utils/static-data'
 import ContactInfoCard from '@/components/public/contact-info-card'
 import { useCreateContactUs } from '@/api/contact-us'
@@ -16,7 +18,7 @@ import PageHero from '../shared/page-hero'
 export default function ContactContent() {
     const toast = useCustomToast()
     const createContactMutation = useCreateContactUs()
-    const { data, isLoading } = useGetSettings('contact_info')
+    const { data } = useGetSettings('contact_info')
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -217,7 +219,7 @@ export default function ContactContent() {
                                     </div>
                                     <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
                                     <p className="text-muted-foreground mb-4">
-                                        Thank you for contacting us. We've received your message and will respond within 24 hours.
+                                        Thank you for contacting us. We&apos;ve received your message and will respond within 24 hours.
                                     </p>
                                     <Button
                                         onClick={() => setIsSubmitted(false)}
@@ -280,7 +282,7 @@ export default function ContactContent() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
                     <p className="text-muted-foreground mb-12">
-                        Can't find what you're looking for? Check our FAQ page or give us a call.
+                        Can&apos;t find what you&apos;re looking for? Check our FAQ page or give us a call.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="/faq" className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-input bg-background hover:bg-accent hover:text-accent-foreground font-semibold transition-colors">

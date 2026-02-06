@@ -1,8 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { useEffect } from "react"
-
-// Extend Window interface for Lightbox2
+import React, { useEffect } from "react"
 declare global {
   interface Window {
     lightbox?: {
@@ -63,33 +62,31 @@ export default function Gallery() {
   }, [])
 
   return (
-    <section className="bg-white py-12 border-t border-gray-200">
-      <div className="container mx-auto">
-        <div className="cat-title-two mb-4">
-          <h1 className="text-3xl font-bold">
-            <a href="single.html" className="text-gray-900 hover:text-blue-600">
-              মিডিয়া গ্যালারি
-            </a>
-          </h1>
-        </div>
+    <section className="container mx-auto bg-white py-12 border-t border-gray-200 px-4">
+      <div className="cat-title-two mb-4">
+        <h1 className="text-3xl font-bold">
+          <a href="single.html" className="text-gray-900 hover:text-blue-600">
+            মিডিয়া গ্যালারি
+          </a>
+        </h1>
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {galleryImages.map((image, index) => (
-            <a
-              key={image.id}
-              href={image.src}
-              data-lightbox="gallery"
-              data-title={image.alt}
-              className="aspect-square overflow-hidden rounded-lg group block shadow-md hover:shadow-xl transition-shadow"
-            >
-              <img
-                src={image.thumb || "/placeholder.svg"}
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-300"
-              />
-            </a>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {galleryImages.map((image) => (
+          <a
+            key={image.id}
+            href={image.src}
+            data-lightbox="gallery"
+            data-title={image.alt}
+            className="aspect-square overflow-hidden rounded-lg group block shadow-md hover:shadow-xl transition-shadow"
+          >
+            <img
+              src={image.thumb || "/placeholder.svg"}
+              alt={image.alt}
+              className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-300"
+            />
+          </a>
+        ))}
       </div>
     </section>
   )

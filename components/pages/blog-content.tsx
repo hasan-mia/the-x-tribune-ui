@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-
+import React from 'react';
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -293,7 +294,7 @@ export default function BlogContent() {
                             </div>
                             <h3 className="text-xl font-semibold mb-2">No articles found</h3>
                             <p className="text-muted-foreground mb-6">
-                                Try adjusting your search or filter to find what you're looking for.
+                                Try adjusting your search or filter to find what you&apos;re looking for.
                             </p>
                             <Button
                                 onClick={() => {

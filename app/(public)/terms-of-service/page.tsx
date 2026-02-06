@@ -1,3 +1,4 @@
+import React from "react"
 import Link from 'next/link'
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle, DollarSign } from 'lucide-react'
 
@@ -24,7 +25,7 @@ export default function TermsAndConditions() {
                     {/* Introduction */}
                     <section className="mb-12">
                         <p className="text-slate-700 leading-relaxed mb-4">
-                            Welcome to Beyond Tax Consultants. These Terms of Service ("Terms") govern your use of our website and services. By accessing our website or engaging our services, you agree to be bound by these Terms. Please read them carefully.
+                            Welcome to Beyond Tax Consultants. These Terms of Service (Terms&quot;) govern your use of our website and services. By accessing our website or engaging our services, you agree to be bound by these Terms. Please read them carefully.
                         </p>
                         <p className="text-slate-700 leading-relaxed">
                             If you do not agree with any part of these Terms, you should not use our website or services. These Terms constitute a legally binding agreement between you and Beyond Tax Consultants.

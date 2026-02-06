@@ -1,0 +1,3 @@
+# Sample for you tell dont crawl anything from my website:
+User-agent: *
+Disallow: /
