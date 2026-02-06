@@ -1,8 +1,7 @@
 'use client'
-
+import React from 'react'
 import { ProtectedRoute } from '../../middleware/protectedRoute'
 import PublicHeader from '@/components/public/header'
-import PublicFooter from '@/components/public/footer'
 
 export default function ClientLayout({
   children,
@@ -13,7 +12,6 @@ export default function ClientLayout({
     <ProtectedRoute>
       <PublicHeader />
       <main>{children}</main>
-      <PublicFooter />
     </ProtectedRoute>
   )
 }

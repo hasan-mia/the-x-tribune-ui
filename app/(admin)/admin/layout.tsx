@@ -1,5 +1,6 @@
 'use client'
 
+import React from "react"
 import { AdminSidebar } from '@/components/admin/navigation/admin-sidebar'
 import { useState } from 'react'
 import { AdminRoute } from '@/middleware/protectedRoute'
